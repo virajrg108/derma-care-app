@@ -1,0 +1,110 @@
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <title>DermaCare</title>
+  <link rel="stylesheet" href="css/hello-world.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="manifest" href="manifest.json">
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <!-- <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128" /> -->
+  <!-- <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" -->
+  <!-- type="text/css" /> -->
+  <script class="jsbin" src="js/jquery.min.js"></script>
+  <script class="jsbin" src="js/jquery-ui.min.js"></script>
+  <meta name="application-name" content="&nbsp;" />
+  <meta name="msapplication-TileColor" content="#FFFFFF" />
+  <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+  <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+  <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+  <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+  <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+  <!-- <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
+
+</head>
+
+<body>
+  <!-- <input type="file" name="pic" accept="image/*"> -->
+  <!-- <input type="file" accept="image/*" capture="environment" onchange="readURL(this)">-->
+  <div class="landing">
+    <div class="topbar">
+      <img class="menu-icon" src="../img/menu.svg" />
+      DermaCare
+
+    </div>
+    <!-- <div>
+      <label for="file" class="label">
+        <div class="capture-icon-wrapper">
+          <img class="capture-icon" src="img/camera.svg" />
+        </div>
+      </label>
+      <input id="file" style="visibility:hidden;" type="file" name="file" onchange="readURL(this)" accept="image/*" />
+    </div> -->
+    <div class="image-wrapper">
+      <img id="blah" src="./img/broken-img.svg" alt="your image" />
+    </div>
+    <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe"></iframe>
+    <form class="form" method="post" enctype="multipart/form-data" action="/upload" target="dummyframe">
+      <label for="file" class="label">
+        <div class="capture-icon-wrapper">
+          <img class="capture-icon" src="img/camera.svg" />
+        </div>
+      </label>
+      <input id="file" style="display:none" type="file" name="file" onchange="readURL(this)" accept="image/*">
+      <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+    <form class="form" method="get" action="data" target="dummyframe">
+      <input id="age" type="text" class="form-control" placeholder="Age" aria-label="Username" aria-describedby="basic-addon1">
+      <input id="sex" type="text" class="form-control" placeholder="Sex" aria-label="Username" aria-describedby="basic-addon1">
+      <label for="sel1">Localization:</label>
+      <select class="form-control selectpicker" id="localization" placeholder="Localization">
+        <option value="back">back</option>
+        <option value="lower extremity">lower extremity</option>
+        <option value="upper extremity">upper extremity</option>
+        <option value="trunk">Trunk</option>
+        <option value="abdomen">Abdomen</option>
+        <option value="face">face</option>
+        <option value="face">face</option>
+        <option value="foot">foot</option>
+        <option value="unknown">unknown</option>
+        <option value="neck">neck</option>
+        <option value="scalp">scalp</option>
+        <option value="hand">hand</option>
+        <option value="ear">ear</option>
+        <option value="genital">genital</option>
+        <option value="acral">acral</option>
+      </select>
+      <input id="submit-btn" class="btn btn-primary" value="Submit">
+    </form>
+    <!-- <div class="form">
+    </div> -->
+  </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(function () {
+          console.log('Service Worker Registered');
+        });
+    }
+  </script>
+  <script src="capture.js"></script>
+</body>
+<!-- age, sex, localization:- back, lower extremity, upper extremity-->
+</html>

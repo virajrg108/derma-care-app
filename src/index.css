@@ -1,0 +1,22 @@
+body{
+  margin: 0;
+}
+.topbar {
+  background-color: #0050C3;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  font-size: 24px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+.menu-icon {
+  width: 40px;
+  height: auto;
+}
+.menu-icon path {
+  fill: #fff;
+  background-color: #fff;
+}
